@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpenTicket"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/arrow_back_24"
+            android:onClick="backClicked"/>
+
+        <!-- Header with "Select Service Type" -->
+        <TextView
+            android:id="@+id/productTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a Service type"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <Spinner
+            android:id="@+id/productSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/product_list"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_spinner_background" />
+
+        <!-- Display the selected product -->
+        <TextView
+            android:id="@+id/selectedProductTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Service: None"
+            android:textSize="18sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:fontFamily="sans-serif"/>
+
+        <!-- Description input field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Enter Description"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:hint="Problem Description"
+            android:inputType="textMultiLine"
+            android:gravity="top|start"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_input_background"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <!-- Select File Button -->
+            <Button
+                android:id="@+id/selectFileButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select File"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/buttonColor"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/selectedFileTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No file selected"
+                android:textSize="18sp"
+                android:textColor="@android:color/darker_gray"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Select File Button -->
+<!--        <Button-->
+<!--            android:id="@+id/selectFileButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Select File"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_marginBottom="24dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/rounded_button_background"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:paddingLeft="24dp"-->
+<!--            android:paddingRight="24dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selectedFileTextView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="No file selected"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="@android:color/darker_gray"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:paddingTop="8dp"-->
+<!--            android:paddingBottom="8dp"-->
+<!--            android:layout_marginBottom="24dp" />-->
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Open Ticket Button -->
+        <Button
+            android:id="@+id/openTicketButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Ticket"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:background="@color/buttonColor"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+<!--        &lt;!&ndash; Button to show ticket status &ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/showStatusButton"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Show Ticket Status"-->
+<!--            android:layout_marginTop="16dp"/>-->
+
+<!--        &lt;!&ndash; TextView to display ticket info &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/ticketInfoTextView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Ticket info will appear here"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_marginTop="16dp"/>-->
+
+    </LinearLayout>
+
+</LinearLayout>
