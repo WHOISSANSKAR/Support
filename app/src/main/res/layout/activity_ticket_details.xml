@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketDetails"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/arrow_back_24"
+        android:onClick="backClicked"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:padding="20dp">
+
+        <!-- Progress Tracker (Left Side) -->
+        <LinearLayout
+            android:id="@+id/progressTracker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1">
+
+            <!-- Status Circle (Order Placed) -->
+            <ImageView
+                android:id="@+id/orderPlacedDot"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/grey_circle" />
+            <TextView
+                android:id="@+id/orderPlacedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ticket Opened"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+            <!-- Vertical Line -->
+            <View
+                android:id="@+id/orderPlacedLine"
+                android:layout_width="2dp"
+                android:layout_height="60dp"
+                android:background="@color/grey" />
+
+            <!-- Status Circle (Dispatched) -->
+            <ImageView
+                android:id="@+id/dispatchedDot"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/grey_circle" />
+            <TextView
+                android:id="@+id/dispatchedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Progress"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+            <!-- Vertical Line -->
+            <View
+                android:id="@+id/dispatchedLine"
+                android:layout_width="2dp"
+                android:layout_height="60dp"
+                android:background="@color/grey" />
+
+            <!-- Status Circle (Delivered) -->
+            <ImageView
+                android:id="@+id/deliveredDot"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/grey_circle" />
+            <TextView
+                android:id="@+id/deliveredText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resolved"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Ticket Details (Right Side) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:paddingStart="16dp">
+
+            <!-- Ticket Details Header -->
+            <TextView
+                android:id="@+id/ticketDetailsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ticket Details"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold" />
+
+            <!-- Ticket Information -->
+            <TextView
+                android:id="@+id/ticketIDText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ticket ID: TICKET-1234"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ticketDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opened: 01-Jan-2024"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ticketServiceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service: Service 1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ticketDescriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: Issue with service"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ticketFileText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="File Attached: None"
+                android:textSize="14sp" />
+
+            <!-- You can add other fields as necessary -->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

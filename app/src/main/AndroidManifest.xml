@@ -13,23 +13,27 @@
         android:theme="@style/Theme.Support"
         tools:targetApi="31">
         <activity
+            android:name=".TicketDetails"
+            android:exported="false" />
+        <activity
             android:name=".TrackStatus"
             android:exported="false" />
         <activity
             android:name=".OpenTicket"
-            android:exported="false" /> <!-- Main entry point of the application -->
+            android:exported="false" />
         <activity
             android:name=".Dashboard"
+            android:exported="false"
+            android:theme="@style/Theme.Support" />
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Login Activity -->
-        <activity
-            android:name=".Login"
-            android:exported="false" /> <!-- MainActivity (You can replace this with another activity if needed) -->
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false" />

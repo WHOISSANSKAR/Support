@@ -1,10 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    android:background="@color/windowBackground"
+    android:padding="16dp">
 
+    <!-- Container for Login Box with left and right margin -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="64dp">
+
+        <!-- Company Logo -->
+        <ImageView
+            android:id="@+id/companyLogo"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logopt"
+            android:contentDescription="Company Logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="44dp" />
+
+        <!-- Username Label (Aligned to the left) -->
+        <TextView
+            android:id="@+id/usernameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="16sp"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/companyLogo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Username Field with Padding and Border -->
+        <EditText
+            android:id="@+id/usernameField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColor="@color/editTextTextColor"
+            android:textColorHint="@color/editTextHintColor"
+            android:inputType="textEmailAddress"
+            android:importantForAccessibility="yes"
+            android:padding="16dp"
+            android:background="@drawable/edittext_border"
+            app:layout_constraintTop_toBottomOf="@id/usernameLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+
+        <!-- Password Label (Aligned to the left) -->
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="16sp"
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/usernameField"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Password Field with Padding and Border -->
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="@color/editTextTextColor"
+            android:textColorHint="@color/editTextHintColor"
+            android:inputType="textPassword"
+            android:importantForAccessibility="yes"
+            android:padding="16dp"
+            android:background="@drawable/edittext_border"
+            app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="18sp"
+            android:backgroundTint="@color/buttonBackground"
+            android:textColor="@color/buttonTextColor"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/passwordField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
