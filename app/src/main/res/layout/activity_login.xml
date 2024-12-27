@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="64dp">
+        android:layout_marginTop="64dp"
+        android:background="@color/Background" >
 
         <!-- Company Logo -->
         <ImageView
@@ -30,7 +31,9 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="44dp" />
+            android:layout_marginTop="44dp"
+
+            />
 
         <!-- Username Label (Aligned to the left) -->
         <TextView

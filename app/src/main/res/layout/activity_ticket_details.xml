@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".TicketDetails"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/windowBackground"
+    android:padding="16dp"
+     >
 
     <TextView
         android:layout_width="30dp"

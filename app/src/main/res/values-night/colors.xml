@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <resources>
-
-    <color name="windowBackground">#FFFFFF</color>
-    <color name="textColorPrimary">#000000</color>
-    <color name="buttonBackground">#003366</color>
-    <color name="buttonTextColor">#FFFFFF</color> <!-- White text for button -->
-    <color name="editTextHintColor">#888888</color> <!-- Hint text color -->
-    <color name="editTextTextColor">#000000</color> <!-- Text color inside EditText -->
+    <color name="black">#000000</color> <!-- Invert black and white -->
+    <color name="white">#000000</color>
+    <color name="buttonColor">#88B0F2</color> <!-- Lighter blue for better contrast -->
+    <color name="windowBackground">#121212</color> <!-- Dark background -->
+    <color name="Background">#121212</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="buttonBackground">#00509E</color> <!-- Adjusted for visibility -->
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="editTextHintColor">#424242</color>
+    <color name="editTextTextColor">#000000</color>
+    <color name="blue">#2196F3</color>
+    <color name="grey">#000000</color> <!-- Darker grey -->
+    <color name="spinnerTextColor">#000000</color>
 
 </resources>
+
+
+
